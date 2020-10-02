@@ -1,0 +1,286 @@
+/* Notering: Jag baserar grundstrukturen på grid-template-areas
+  
+  navbar_container, friends_container & notifications_container
+  har nested grid-template-area eller flex 
+  
+  Efter att ha undersökt hur det ser ut på större hemsidor
+  har jag valt tre primära width-nivåer för mina media queries
+  för att passa mitt appupplägg:
+  max-width: 1098px
+  max-width: 900px
+  max-width: 675px
+
+  När designen når lägre än 675 pixlar så 
+  anpassar jag appen fullt ut för mobilskärmar 
+  */
+
+body {
+  background-color: #999;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* ------------- */
+/* GRID SETTINGS */
+/* ------------- */
+
+.grid {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
+    Arial, sans-serif;
+  font-weight: bold;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+    'c c c c c'
+    'e . f . g'
+    'h h h h h';
+  grid-template-columns: 310px auto minmax(60px, 900px) auto 300px;
+  grid-template-rows: 60px minmax(auto, 500px) 60px;
+  padding-bottom: 1em;
+}
+
+.grid > div {
+  display: grid;
+  background: lightgreen;
+}
+
+.grid > div:nth-child(even) {
+  background: #999;
+}
+
+.navbar_container {
+  background-color: #666 !important;
+  grid-gap: 10px;
+  grid-area: c;
+  display: grid;
+  grid-template-areas: 'ca cb . cc . cd';
+  grid-template-columns: 60px 240px auto minmax(60px, 900px) auto 300px;
+  grid-template-rows: 60px;
+  border-bottom: 1px solid #444;
+}
+
+.logo {
+  grid-area: ca;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  grid-area: cb;
+  background-color: whitesmoke;
+  margin: 8px 2px 8px 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search > input {
+  background-color: whitesmoke;
+  width: 80%;
+  outline: none;
+  padding: 12px;
+  border: none;
+}
+
+.search > button {
+  background-color: whitesmoke;
+  padding: 4px;
+  border: none;
+  margin-left: 5px;
+}
+
+.navbar {
+  max-width: 400px;
+  grid-area: cc;
+  display: flex;
+  padding-left: 12%;
+  padding-right: 12%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #222;
+}
+
+.active {
+  color: whitesmoke !important;
+}
+
+ul {
+  list-style-type: none;
+  color: black;
+}
+
+.notifications_container {
+  grid-area: cd;
+  background-color: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.avatar {
+  margin: auto;
+  width: 175px;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+}
+
+.notifications {
+  padding-right: 1.5em;
+  align-content: space-between;
+}
+
+.leftbar {
+  grid-area: e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  grid-area: f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.friends_container {
+  background-color: transparent !important;
+  grid-gap: 10px;
+  grid-area: g;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(auto, 500px) 60px;
+}
+
+.friends {
+  grid-column: 1/3;
+  grid-row: 2;
+  background: #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.friendslist {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  background: #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  grid-area: h;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------------- */
+/* MEDIA QUERIES: */
+/* -------------- */
+
+@media (min-width: 1098px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 1098px) {
+  .grid {
+    grid-template-areas:
+      'c c'
+      'f g'
+      'h h';
+    grid-template-columns: minmax(60px, 900px) 300px;
+  }
+
+  .navbar_container {
+    grid-template-areas: 'ca cb cc cd' !important;
+    grid-template-columns: 60px 250px minmax(60px, 900px) 200px !important;
+  }
+
+  .dropdown {
+    display: none;
+  }
+
+  .leftbar {
+    display: none !important;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .avatar {
+    width: 50px !important;
+    font-size: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-areas:
+      'c'
+      'f'
+      'h';
+    grid-template-columns: minmax(60px, 900px) !important;
+  }
+  .navbar_container {
+    grid-template-areas: 'ca cb cc cd' !important;
+    grid-template-columns: 60px minmax(60px, 900px) 60px 300px !important;
+  }
+  .navbar {
+    display: none !important;
+  }
+
+  .dropdown {
+    display: block;
+  }
+
+  .friends_container {
+    display: none !important;
+  }
+  .hamburger {
+    grid-area: cc;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .avatar {
+    width: 175px !important;
+    font-size: 100%;
+  }
+}
+
+@media (max-width: 675px) {
+  .grid {
+    grid-template-areas:
+      'c'
+      'f'
+      'h';
+    grid-template-columns: auto minmax(auto, 900px);
+  }
+  .navbar_container {
+    grid-template-areas: 'ca cb cc' !important;
+    grid-template-columns: 60px minmax(60px, 900px) 60px !important;
+  }
+
+  .notifications_container {
+    display: none !important;
+  }
+}
