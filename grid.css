@@ -16,11 +16,7 @@
 
 body {
   background-color: #999;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  /* test */
+  margin: 0px;
 }
 
 /* ------------- */
@@ -38,8 +34,8 @@ body {
     'e . f . g'
     'h h h h h';
   grid-template-columns: 310px auto minmax(60px, 900px) auto 300px;
-  grid-template-rows: 60px minmax(auto, 500px) 60px;
-  padding-bottom: 1em;
+  grid-template-rows: 60px minmax(300px, auto) 150px;
+  height: 100vh;
 }
 
 .grid > div {
@@ -64,7 +60,6 @@ body {
 
 .logo {
   grid-area: ca;
-  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,7 +67,8 @@ body {
 
 .search {
   grid-area: cb;
-  background-color: whitesmoke;
+  border-radius: 20px;
+  background-color: rgb(177, 177, 177);
   margin: 8px 2px 8px 2px;
   display: flex;
   justify-content: center;
@@ -80,16 +76,19 @@ body {
 }
 
 .search > input {
-  background-color: whitesmoke;
-  width: 80%;
+  border-radius: 20px;
+  background-color: rgb(177, 177, 177);
+  width: 100%;
+  margin-left: 5px;
   outline: none;
-  padding: 12px;
+  padding: 13px;
   border: none;
 }
 
 .search > button {
-  background-color: whitesmoke;
+  background-color: rgb(177, 177, 177);
   padding: 4px;
+  margin-right: 10px;
   border: none;
   margin-left: 5px;
 }
@@ -107,6 +106,11 @@ body {
 .navbar a {
   text-decoration: none;
   color: #222;
+}
+
+.avatar a {
+  text-decoration: none;
+  color: whitesmoke;
 }
 
 .active {
@@ -156,7 +160,6 @@ ul {
 }
 
 .friends_container {
-  background-color: transparent !important;
   grid-gap: 10px;
   grid-area: g;
   display: grid;
@@ -246,7 +249,6 @@ ul {
   .navbar {
     display: none !important;
   }
-
   .dropdown {
     display: block;
   }
