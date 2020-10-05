@@ -1,5 +1,5 @@
 .navbar_container {
-  background-color: #666 !important;
+  background-color: #666;
   grid-gap: 10px;
   grid-area: c;
   display: grid;
@@ -24,6 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid #444;
 }
 
 .search > input {

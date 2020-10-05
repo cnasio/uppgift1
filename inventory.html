@@ -7,20 +7,22 @@
     <link rel="stylesheet" href="./src/shared/design/grid.css" />
     <link rel="stylesheet" href="./src/shared/design/media.css" />
     <link rel="stylesheet" href="./src/shared/design/navbar.css" />
-    <title>Inventory</title>
     <script>
       const friendslistShownHandler = () => {
-        const x = document.getElementById('friendslist');
-        x.style.display === 'none'
-          ? (x.style.display = 'flex')
-          : (x.style.display = 'none');
+        const l = document.getElementById('friendslist');
+        l.style.display === 'none' || !l.style.display
+          ? (l.style.display = 'flex')
+          : (l.style.display = 'none');
       };
     </script>
+    <title>Inventory</title>
   </head>
   <body>
     <div class="grid">
       <div class="navbar_container">
-        <div class="logo"><img src="/src/shared/images/split50.png" alt="" /></div>
+        <div class="logo">
+          <a href="index.html"><img src="/src/shared/images/split50.png" alt="" /></a>
+        </div>
         <div class="search">
           <input type="text" placeholder="Search..." /><button>
             <img src="/src/shared/images/search.png" alt="" />
@@ -35,10 +37,9 @@
         <div class="hamburger">&#9776;</div>
         <div class="notifications_container">
           <div class="avatar">
-            <img
-              src="/src/shared/images/avatar.png"
-              alt=""
-            />&nbsp;&nbsp;Niklas&nbsp;&nbsp;
+            <img src="/src/shared/images/avatar.png" alt="" />&nbsp;&nbsp;<a href="#"
+              >Niklas</a
+            >&nbsp;&nbsp;
             <img class="dropdown" src="/src/shared/images/dropdown.png" alt="" />
           </div>
           <div class="notifications">
@@ -49,13 +50,21 @@
       </div>
       <div class="leftbar">Leftbar</div>
       <div class="main">INVENTORY</div>
-      <div class="friends_container">
-        <div id="friendslist" class="friendslist">Friends List</div>
-        <div class="friendsToggler">
-          <button onclick="friendslistShownHandler()">Friends</button>
+      <div class="rightbar">
+        <div class="infopanel_container">
+          <div class="infopanel">Infopanel #1</div>
+          <div class="infopanel">Infopanel #2</div>
+        </div>
+
+        <div class="friends_container">
+          <div id="friendslist" class="friendslist">Friends List</div>
+          <div class="friendsToggler">
+            <button onclick="friendslistShownHandler()">
+              <img src="/src/shared/images/friends.png" alt="" />&nbsp;&nbsp;Friends
+            </button>
+          </div>
         </div>
       </div>
-      <div class="footer">Footer</div>
     </div>
   </body>
 </html>

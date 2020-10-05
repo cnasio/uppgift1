@@ -25,23 +25,14 @@
   display: grid;
   grid-template-areas:
     'c c c c c'
-    'e . f . g'
-    'h h h h h';
+    'e . f . g';
   grid-template-columns: 310px auto minmax(60px, 900px) auto 300px;
-  grid-template-rows: 60px minmax(300px, auto) 150px;
+  grid-template-rows: 60px minmax(300px, auto);
   height: 100vh;
 }
 
-.grid > div {
-  display: grid;
-  background: lightgreen;
-}
-
-.grid > div:nth-child(even) {
-  background: #999;
-}
-
 .leftbar {
+  background-color: lightgreen;
   grid-area: e;
   display: flex;
   justify-content: center;
@@ -55,17 +46,40 @@
   align-items: center;
 }
 
-.friends_container {
+.rightbar {
   grid-area: g;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: minmax(200px, auto) 60px;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.infopanel_container {
+  grid-row: 1;
+}
+
+.infopanel {
+  background-color: #666 !important;
+  color: whitesmoke;
+  margin-right: 5px;
+  border-radius: 20px;
+  grid-row: 2;
+  background: #999;
+  display: flex;
+  height: 150px;
+  margin-top: 20px;
+  border: 1px solid #444;
+  justify-content: center;
+  align-items: center;
+}
+
+.friends_container {
+  grid-row: 2/4;
+  height: auto;
+  display: grid;
+  grid-template-rows: auto minmax(200px, 500px) 45px;
 }
 
 .friendsToggler {
-  height: auto;
-  grid-column: 1/3;
-  grid-row: 2;
+  grid-row: 3;
   background: #999;
   display: flex;
   justify-content: flex-end;
@@ -77,37 +91,34 @@
     Arial, sans-serif;
   font-weight: bold;
   font-size: 16px;
-  color: #222;
-  background-color: #00ff08;
+  color: whitesmoke;
+  background-color: #666;
   border: none;
+  width: 295px;
   padding: 8px 80px;
   margin-right: 5px;
   margin-bottom: 5px;
   border-radius: 20px;
-  border: 2px solid black;
+  border: 1px solid #444;
+  outline-width: 0;
 }
 
 .friendsToggler > button:hover {
-  background-color: lightgreen;
-  color: #666;
+  background-color: #555;
+  color: rgb(228, 228, 228);
   cursor: pointer;
 }
 
 .friendslist {
-  background-color: teal !important;
-  grid-column: 1/3;
-  grid-row: 1/2;
+  background-color: #666 !important;
+  color: whitesmoke;
+  margin-right: 5px;
+  border-radius: 20px;
+  grid-row: 2;
   background: #999;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer {
-  background-color: #666 !important;
-  border-top: 1px solid #444;
-  grid-area: h;
-  display: flex;
+  margin-top: 20px;
+  border: 1px solid #444;
   justify-content: center;
   align-items: center;
 }

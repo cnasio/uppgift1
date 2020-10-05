@@ -2,6 +2,15 @@
 /* MEDIA QUERIES: */
 /* -------------- */
 
+@media (max-height: 660px) {
+  .infopanel_container {
+    display: none;
+  }
+  .friends_container {
+    grid-row: 1/4;
+  }
+}
+
 @media (min-width: 1098px) {
   .hamburger {
     display: none;
@@ -12,11 +21,12 @@
   .grid {
     grid-template-areas:
       'c c'
-      'f g'
-      'h h';
+      'f g';
     grid-template-columns: minmax(60px, 900px) 300px;
   }
-
+  .friendslist {
+    display: none;
+  }
   .navbar_container {
     grid-template-areas: 'ca cb cc cd' !important;
     grid-template-columns: 60px 250px minmax(60px, 900px) 200px !important;
@@ -44,8 +54,7 @@
   .grid {
     grid-template-areas:
       'c'
-      'f'
-      'h';
+      'f';
     grid-template-columns: minmax(60px, 900px) !important;
   }
   .navbar_container {
@@ -59,8 +68,12 @@
     display: block;
   }
 
-  .friends_container {
-    display: none !important;
+  .rightbar {
+    grid-area: f;
+  }
+
+  .infopanel_container {
+    display: none;
   }
   .hamburger {
     grid-area: cc;
@@ -74,22 +87,81 @@
     width: 175px !important;
     font-size: 100%;
   }
+
+  .friends_container {
+    justify-content: flex-end;
+  }
+
+  .friendslist {
+    margin-right: 5px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    background: #999;
+    width: 300px;
+    margin-top: 20px;
+    border: 2px solid #444;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .friendsToggler > button {
+    font-size: 0px;
+    width: 70px;
+    height: 70px;
+    padding: 8px 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 40px;
+    border: 2px solid #444;
+  }
 }
 
 @media (max-width: 675px) {
   .grid {
     grid-template-areas:
       'c'
-      'f'
-      'h';
+      'f';
     grid-template-columns: auto minmax(auto, 900px);
   }
   .navbar_container {
     grid-template-areas: 'ca cb cc' !important;
     grid-template-columns: 60px minmax(60px, 900px) 60px !important;
   }
+  .infopanel_container {
+    display: none;
+  }
 
   .notifications_container {
     display: none !important;
+  }
+
+  .rightbar {
+    grid-area: f;
+  }
+
+  .friends_container {
+    justify-content: flex-end;
+  }
+
+  .friendslist {
+    margin-right: 5px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    background: #999;
+    margin-top: 20px;
+    border: 2px solid #444;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .friendsToggler > button {
+    font-size: 0px;
+    width: 70px;
+    height: 70px;
+    padding: 8px 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 40px;
+    border: 2px solid #444;
   }
 }
