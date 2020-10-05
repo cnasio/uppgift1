@@ -18,10 +18,7 @@
 /* GRID SETTINGS */
 /* ------------- */
 
-.grid {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
-    Arial, sans-serif;
-  font-weight: bold;
+#wrapper {
   display: grid;
   grid-template-areas:
     'c c c c c'
@@ -31,7 +28,7 @@
   height: 100vh;
 }
 
-.leftbar {
+#leftbar {
   background-color: lightgreen;
   grid-area: e;
   display: flex;
@@ -39,14 +36,14 @@
   align-items: center;
 }
 
-.main {
+section {
   grid-area: f;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.rightbar {
+#rightbar {
   grid-area: g;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;

@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/shared/design/index.css" />
-    <link rel="stylesheet" href="./src/shared/design/grid.css" />
+    <link rel="stylesheet" href="./src/shared/design/main.css" />
     <link rel="stylesheet" href="./src/shared/design/media.css" />
-    <link rel="stylesheet" href="./src/shared/design/navbar.css" />
+    <link rel="stylesheet" href="./src/shared/design/header.css" />
     <script>
       const friendslistShownHandler = () => {
         const l = document.getElementById('friendslist');
@@ -15,11 +15,12 @@
           : (l.style.display = 'none');
       };
     </script>
+
     <title>About</title>
   </head>
   <body>
-    <div class="grid">
-      <div class="navbar_container">
+    <div id="wrapper">
+      <nav>
         <div class="logo">
           <a href="index.html"><img src="/src/shared/images/split50.png" alt="" /></a>
         </div>
@@ -28,29 +29,39 @@
             <img src="/src/shared/images/search.png" alt="" />
           </button>
         </div>
+
         <ul class="navbar">
-          <li><a " href="index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="inventory.html">My Inventory</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a class="active href="about.html">About</a></li>
+          <li><a class="active" href="about.html">About</a></li>
         </ul>
+
         <div class="hamburger">&#9776;</div>
         <div class="notifications_container">
           <div class="avatar">
-            <img src="/src/shared/images/avatar.png" alt="" />&nbsp;&nbsp;<a href="#"
-              >Niklas</a
-            >&nbsp;&nbsp;
-            <img class="dropdown" src="/src/shared/images/dropdown.png" alt="" />
+            <a href="inventory.html"
+              ><img
+                src="/src/shared/images/avatar.png"
+                alt="" />&nbsp;&nbsp;Niklas&nbsp;&nbsp;
+              <img
+                class="avatar_dropdown"
+                src="/src/shared/images/avatar_dropdown.png"
+                alt=""
+            /></a>
           </div>
           <div class="notifications">
             <img src="/src/shared/images/flag.png" alt="" />&nbsp;&nbsp;&nbsp;
             <img src="/src/shared/images/notifications.png" alt="" />
           </div>
         </div>
-      </div>
-      <div class="leftbar">Leftbar</div>
-      <div class="main">ABOUT</div>
-      <div class="rightbar">
+      </nav>
+
+      <aside id="leftbar">Leftbar</aside>
+
+      <section>ABOUT</section>
+
+      <aside id="rightbar">
         <div class="infopanel_container">
           <div class="infopanel">Infopanel #1</div>
           <div class="infopanel">Infopanel #2</div>
@@ -64,7 +75,7 @@
             </button>
           </div>
         </div>
-      </div>
+      </aside>
     </div>
   </body>
 </html>

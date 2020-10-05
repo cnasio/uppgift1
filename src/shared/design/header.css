@@ -1,6 +1,6 @@
-.navbar_container {
+nav {
   background-color: #666;
-  grid-gap: 10px;
+  gap: 10px;
   grid-area: c;
   display: grid;
   grid-template-areas: 'ca cb . cc . cd';
@@ -9,11 +9,22 @@
   border-bottom: 1px solid #444;
 }
 
+nav > ul {
+  list-style-type: none;
+  color: black;
+}
+
 .logo {
   grid-area: ca;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search {
@@ -73,15 +84,13 @@
 .avatar a {
   text-decoration: none;
   color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .active {
   color: whitesmoke !important;
-}
-
-ul {
-  list-style-type: none;
-  color: black;
 }
 
 .notifications_container {

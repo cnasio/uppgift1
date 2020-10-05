@@ -15,10 +15,13 @@
   .hamburger {
     display: none;
   }
+  .friendslist {
+    display: none;
+  }
 }
 
 @media (max-width: 1098px) {
-  .grid {
+  #wrapper {
     grid-template-areas:
       'c c'
       'f g';
@@ -27,16 +30,16 @@
   .friendslist {
     display: none;
   }
-  .navbar_container {
+  nav {
     grid-template-areas: 'ca cb cc cd' !important;
     grid-template-columns: 60px 250px minmax(60px, 900px) 200px !important;
   }
 
-  .dropdown {
+  .avatar_dropdown {
     display: none;
   }
 
-  .leftbar {
+  #leftbar {
     display: none !important;
   }
 
@@ -51,24 +54,24 @@
 }
 
 @media (max-width: 900px) {
-  .grid {
+  #wrapper {
     grid-template-areas:
       'c'
       'f';
     grid-template-columns: minmax(60px, 900px) !important;
   }
-  .navbar_container {
+  nav {
     grid-template-areas: 'ca cb cc cd' !important;
     grid-template-columns: 60px minmax(60px, 900px) 60px 300px !important;
   }
   .navbar {
     display: none !important;
   }
-  .dropdown {
+  .avatar_dropdown {
     display: block;
   }
 
-  .rightbar {
+  #rightbar {
     grid-area: f;
   }
 
@@ -99,7 +102,7 @@
     background: #999;
     width: 300px;
     margin-top: 20px;
-    border: 2px solid #444;
+    border: 1px solid #444;
     justify-content: center;
     align-items: center;
   }
@@ -112,21 +115,22 @@
     margin-right: 10px;
     margin-bottom: 10px;
     border-radius: 40px;
-    border: 2px solid #444;
+    border: 1px solid #444;
   }
 }
 
 @media (max-width: 675px) {
-  .grid {
+  #wrapper {
     grid-template-areas:
       'c'
       'f';
     grid-template-columns: auto minmax(auto, 900px);
   }
-  .navbar_container {
+  nav {
     grid-template-areas: 'ca cb cc' !important;
     grid-template-columns: 60px minmax(60px, 900px) 60px !important;
   }
+
   .infopanel_container {
     display: none;
   }
@@ -135,7 +139,7 @@
     display: none !important;
   }
 
-  .rightbar {
+  #rightbar {
     grid-area: f;
   }
 
@@ -149,7 +153,7 @@
     border-radius: 20px;
     background: #999;
     margin-top: 20px;
-    border: 2px solid #444;
+    border: 1px solid #444;
     justify-content: center;
     align-items: center;
   }
@@ -162,6 +166,6 @@
     margin-right: 10px;
     margin-bottom: 10px;
     border-radius: 40px;
-    border: 2px solid #444;
+    border: 1px solid #444;
   }
 }

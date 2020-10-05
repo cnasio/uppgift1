@@ -1,3 +1,20 @@
+============================
+TO DO:
+Hamburger dropdown
+Leftbar, content
+Fyll i readme med info (även från grid.css)
+
+============================
+UPPGIFT 1: Egna noteringar:
+
+1.
+2.
+3.
+4.
+5.
+
+============================
+
 Inlämninguppgift 1 - Responsiv design med CSS Grid & Media Queries
 
 1. Skapa ett nytt projekt med minst 2 html filer som har
