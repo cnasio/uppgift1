@@ -3,8 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="grid.css" />
+    <link rel="stylesheet" href="./src/shared/design/index.css" />
+    <link rel="stylesheet" href="./src/shared/design/grid.css" />
+    <link rel="stylesheet" href="./src/shared/design/media.css" />
+    <link rel="stylesheet" href="./src/shared/design/navbar.css" />
     <title>Inventory</title>
+    <script>
+      const friendslistShownHandler = () => {
+        const x = document.getElementById('friendslist');
+        x.style.display === 'none'
+          ? (x.style.display = 'flex')
+          : (x.style.display = 'none');
+      };
+    </script>
   </head>
   <body>
     <div class="grid">
@@ -39,8 +50,10 @@
       <div class="leftbar">Leftbar</div>
       <div class="main">INVENTORY</div>
       <div class="friends_container">
-        <div class="friendslist">Friends List</div>
-        <div class="friends">Friends</div>
+        <div id="friendslist" class="friendslist">Friends List</div>
+        <div class="friendsToggler">
+          <button onclick="friendslistShownHandler()">Friends</button>
+        </div>
       </div>
       <div class="footer">Footer</div>
     </div>

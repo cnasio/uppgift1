@@ -1,0 +1,20 @@
+/* Notering: Jag baserar grundstrukturen på grid-template-areas
+  
+  navbar_container, friends_container & notifications_container
+  har nested grid-template-area eller flex 
+  
+  Efter att ha undersökt hur det ser ut på större hemsidor
+  har jag valt tre primära width-nivåer för mina media queries
+  för att passa mitt appupplägg:
+  max-width: 1098px
+  max-width: 900px
+  max-width: 675px
+
+  När designen når lägre än 675 pixlar så 
+  anpassar jag appen fullt ut för mobilskärmar 
+  */
+
+body {
+  background-color: #999;
+  margin: 0px;
+}
