@@ -4,16 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/src/shared/images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./src/shared/design/index.css" />
     <link rel="stylesheet" href="./src/shared/design/main.css" />
     <link rel="stylesheet" href="./src/shared/design/media.css" />
     <link rel="stylesheet" href="./src/shared/design/header.css" />
     <script>
       const friendslistShownHandler = () => {
-        const l = document.getElementById('friendslist');
-        l.style.display === 'none' || !l.style.display
-          ? (l.style.display = 'flex')
-          : (l.style.display = 'none');
+        const x = document.getElementById('friendslist');
+        x.style.display === 'none' || !x.style.display
+          ? (x.style.display = 'flex')
+          : (x.style.display = 'none');
+      };
+      const hamburgerExpandHandler = () => {
+        const x = document.getElementById('leftbar');
+        const y = document.getElementById('main');
+        if (x.style.display === 'none' || !x.style.display) {
+          x.style.display = 'grid';
+          y.style.display = 'none';
+        } else {
+          x.style.display = 'none';
+          y.style.display = 'flex';
+        }
       };
     </script>
 
@@ -33,12 +43,14 @@
 
         <ul class="navbar">
           <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="inventory.html">My Inventory</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
 
-        <div class="hamburger">&#9776;</div>
+        <div class="hamburger">
+          <a onclick="hamburgerExpandHandler()">&#9776;</a>
+        </div>
         <div class="notifications_container">
           <div class="avatar">
             <a href="inventory.html"
@@ -58,9 +70,46 @@
         </div>
       </nav>
 
-      <aside id="leftbar">Leftbar</aside>
+      <aside id="leftbar">
+        <div class="avatarpanel">
+          <div id="leftbar-avatar-image">
+            <a href="inventory.html"
+              ><img src="/src/shared/images/avatar100.png" alt="" />
+            </a>
+          </div>
 
-      <section>HOME</section>
+          <a id="avatarpanel_name" href="inventory.html">Niklas Hilmersson</a>
+          <a id="avatarpanel_info" href="inventory.html">Profile</a>
+          <a id="avatarpanel_info_two" href="inventory.html">Log out</a>
+        </div>
+
+        <ul class="leftbar_navbar">
+          <hr />
+          <li>
+            <a class="active" href="index.html"
+              ><img src="/src/shared/images/home.png" alt="" />&nbsp;&nbsp;Home</a
+            >
+          </li>
+          <li>
+            <a href="inventory.html"
+              ><img src="/src/shared/images/inventory.png" alt="" />&nbsp;&nbsp;
+              Inventory</a
+            >
+          </li>
+          <li>
+            <a href="contact.html"
+              ><img src="/src/shared/images/contact.png" alt="" />&nbsp;&nbsp;Contact</a
+            >
+          </li>
+          <li>
+            <a href="about.html"
+              ><img src="/src/shared/images/about.png" alt="" />&nbsp;&nbsp;About</a
+            >
+          </li>
+        </ul>
+      </aside>
+
+      <section id="main">HOME</section>
 
       <aside id="rightbar">
         <div class="infopanel_container">

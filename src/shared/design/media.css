@@ -18,6 +18,9 @@
   .friendslist {
     display: none;
   }
+  #leftbar {
+    display: grid !important;
+  }
 }
 
 @media (max-width: 1098px) {
@@ -25,7 +28,7 @@
     grid-template-areas:
       'c c'
       'f g';
-    grid-template-columns: minmax(60px, 900px) 300px;
+    grid-template-columns: minmax(60px, 900px) 320px;
   }
   .friendslist {
     display: none;
@@ -39,11 +42,11 @@
     display: none;
   }
 
-  #leftbar {
-    display: none !important;
+  .hamburger {
+    display: none;
   }
 
-  .hamburger {
+  #leftbar {
     display: none;
   }
 
@@ -73,6 +76,12 @@
 
   #rightbar {
     grid-area: f;
+  }
+
+  #leftbar {
+    display: none;
+    grid-area: f;
+    margin-right: 20px;
   }
 
   .infopanel_container {
@@ -145,6 +154,7 @@
 
   .friends_container {
     justify-content: flex-end;
+    margin-right: 10px;
   }
 
   .friendslist {
@@ -167,5 +177,8 @@
     margin-bottom: 10px;
     border-radius: 40px;
     border: 1px solid #444;
+  }
+  .hamburger > a:hover {
+    background-color: transparent !important;
   }
 }
