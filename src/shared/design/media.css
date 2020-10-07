@@ -19,7 +19,7 @@
     display: none;
   }
   #leftbar {
-    display: grid !important;
+    display: grid;
   }
 }
 
@@ -35,7 +35,11 @@
   }
   nav {
     grid-template-areas: 'ca cb cc cd' !important;
-    grid-template-columns: 60px 250px minmax(60px, 900px) 200px !important;
+    grid-template-columns: 60px 250px minmax(60px, 900px) 180px !important;
+  }
+
+  #leftbar {
+    display: none;
   }
 
   .avatar_dropdown {
@@ -43,10 +47,6 @@
   }
 
   .hamburger {
-    display: none;
-  }
-
-  #leftbar {
     display: none;
   }
 
@@ -78,30 +78,9 @@
     grid-area: f;
   }
 
-  #leftbar {
-    display: none;
-    grid-area: f;
-    margin-right: 20px;
-  }
-
-  .infopanel_container {
-    display: none;
-  }
-  .hamburger {
-    grid-area: cc;
-    font-size: x-large;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .avatar {
-    width: 175px !important;
-    font-size: 100%;
-  }
-
   .friends_container {
     justify-content: flex-end;
+    grid-template-rows: auto minmax(300px, 600px) 45px;
   }
 
   .friendslist {
@@ -125,6 +104,41 @@
     margin-bottom: 10px;
     border-radius: 40px;
     border: 1px solid #444;
+  }
+
+  .infopanel_container {
+    display: none;
+  }
+
+  #leftbar {
+    display: none;
+    grid-area: f;
+    margin-right: 20px;
+  }
+
+  .leftbar_navbar > li {
+    width: 98%;
+  }
+
+  .leftbar_navbar > hr {
+    width: 75%;
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hamburger {
+    grid-area: cc;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .avatar {
+    width: 175px !important;
+    font-size: 100%;
   }
 }
 

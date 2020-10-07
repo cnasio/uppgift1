@@ -1,29 +1,21 @@
-============================
-TO DO:
-Hamburger dropdown
-Leftbar, content
-Fyll i readme med info (även från grid.css)
+-=UPPGIFT 1=-
 
-============================
-UPPGIFT 1: Egna noteringar:
+Hej Arasto!
 
-1.
-2.
-3.
-4.
-5.
+Min design är inspirerad av främst Facebook, Linkedin och Esportal
 
-============================
+Jag började med att undersöka exakt vad Facebook-sidan gjorde när jag minskade fönstret.
+Utefter det så valde jag tre primära width-bryt för min egna sida:
 
-Inlämninguppgift 1 - Responsiv design med CSS Grid & Media Queries
+1. max-width: 1098px
+2. max-width: 900px
+3. max-width: 675px (från och med denna widthen så designar jag helt för att passa mobil)
 
-1. Skapa ett nytt projekt med minst 2 html filer som har
-   minst 3 element varav ett av dessa element är en bild (img).
+Jag har lagt ganska mycket tid på detta. Dels för att det är kul och dels för att min plan är att använda designen jag skapar här i mitt fortsatta projekt.
 
-2. Skapa en(alternativt flera) .css fil(er) och importera de html mall du tidigare skapat.
+Jag har bara lekt runt i CSS-filerna tills det ser ut som jag velat.
+Du kommer säkert att hitta otaligt med redundant kod/förbättringspotential i min kod. :)
 
-3. I din .css skall du använda dig av CSS Grid & Media Queries för att ge elementen i projektet ett responsivt beteende.
+Du kan använda colortestmode.css för att enklare se hur mina @media-settings fungerar.
 
-4. Man skall även kunna navigera sig mellan två olika vyer (exempelvis mellan en 'Home' och en 'About' vy)
-
-Krav: Sidan skall vara responsiv till både Desktop samt Mobile och man skall kunna navigera sig mellan minst två olika vyer. varav båda skall vara responsiva.
+// Niklas

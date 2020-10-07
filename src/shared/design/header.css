@@ -1,3 +1,7 @@
+/* --------------- */
+/* HEADER SETTINGS */
+/* --------------- */
+
 nav {
   background-color: #666;
   gap: 10px;
@@ -124,4 +128,5 @@ nav {
 .hamburger > a:hover {
   background-color: #888;
   border-radius: 10px;
+  cursor: pointer;
 }

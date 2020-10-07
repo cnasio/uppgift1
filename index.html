@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/src/shared/images/favicon.ico" type="image/x-icon" />
+    <!-- <link rel="stylesheet" href="./src/shared/design/colortestmode.css" /> -->
     <link rel="stylesheet" href="./src/shared/design/main.css" />
     <link rel="stylesheet" href="./src/shared/design/media.css" />
     <link rel="stylesheet" href="./src/shared/design/header.css" />
     <script>
+      // Två script som styr friendsknappen och hamburgerknappen
       const friendslistShownHandler = () => {
         const x = document.getElementById('friendslist');
         x.style.display === 'none' || !x.style.display
@@ -17,9 +19,11 @@
       const hamburgerExpandHandler = () => {
         const x = document.getElementById('leftbar');
         const y = document.getElementById('main');
+        const z = document.getElementById('friendslist');
         if (x.style.display === 'none' || !x.style.display) {
           x.style.display = 'grid';
           y.style.display = 'none';
+          z.style.display = 'none';
         } else {
           x.style.display = 'none';
           y.style.display = 'flex';
